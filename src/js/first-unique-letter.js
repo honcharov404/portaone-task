@@ -10,12 +10,12 @@ function onFormSubmit(e) {
 
   const formData = e.target.text.value;
 
-  if (formData.trim().length === 0) {
+  const uniqueLetter = createWords(formData);
+
+  if (formData.trim().length === 0 || uniqueLetter === undefined) {
     alert('Enter any text in area!');
     return;
   }
-
-  const uniqueLetter = createWords(formData);
 
   const result = `<p class='result'> Your first unique letter in text: <span class='result-inner'>"${uniqueLetter}"</span></p>`;
   resultEl.innerHTML = '';
@@ -30,7 +30,7 @@ function onResetForm() {
 
 const createWords = text => {
   const uniqueLetters = [];
-  text.split(/[ -/\n/\t.,"/\s+/]/).map(el => {
+  text.split(/[ -/\n/\t.,"<>^0-9/\s+/]/).map(el => {
     const allLetters = filterLetter(el);
 
     if (allLetters) {
