@@ -30,7 +30,7 @@ function onResetForm() {
 
 const createWords = text => {
   const uniqueLetters = [];
-  text.split(/[ -/\n/\t.,"<>^0-9/\s+/]/).map(el => {
+  text.split(/[ -/\n/\t.,"<>^0-9?@_=/\s+/]/).map(el => {
     const allLetters = filterLetter(el);
 
     if (allLetters) {
