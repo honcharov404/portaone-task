@@ -1,0 +1,30 @@
+{
+  "name": "portaone-task",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://honcharov404.github.io/portaone-task",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /portaone-task/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honcharov404/portaone-task.git"
+  },
+  "keywords": [],
+  "author": "Oleksandr Honcharov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/honcharov404/portaone-task/issues"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
